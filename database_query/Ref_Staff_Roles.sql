@@ -12,13 +12,15 @@ USE ApexRestaurantDB;
     );
 
 INSERT INTO Ref_Staff_Roles
-           (Staff_Role_Description 
+           (Staff_Role_Code
+           ,Staff_Role_Description 
            ,CreatedOn
          
         )
 VALUES 
-( 
- 'Waiter',  
+(
+    '001', 
+   'Waiter',  
   
  '2019-02-01 00:00:00.000'
  

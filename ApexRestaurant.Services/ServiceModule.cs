@@ -1,9 +1,21 @@
-using ApexRestaurant.Repository.Domain; 
+
+using Microsoft.Extensions.DependencyInjection; 
+using ApexRestaurant.Services.SCustomer;
+
+    
+
+
+
  
-namespace ApexRestaurant.Services.SCustomer 
+namespace ApexRestaurant.Services 
 { 
-    public interface ICustomerService : IGenericService<Customer> 
+    public static class ServicesModule 
     { 
+        public static void Register(IServiceCollection services) 
+        { 
+            services.AddTransient<ICustomerServices, CustomerService>(); 
+        } 
+
  
     } 
 } 
